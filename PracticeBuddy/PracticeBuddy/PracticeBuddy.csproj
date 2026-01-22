@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\app.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PracticeBuddy.Client\PracticeBuddy.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="10.0.2" />
