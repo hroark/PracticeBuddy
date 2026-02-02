@@ -9,6 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Components\Account\Pages\.Login.cs" />
+    <Compile Remove="Components\Account\Pages\RadzenLogin.razor.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="wwwroot\app.css" />
   </ItemGroup>
 

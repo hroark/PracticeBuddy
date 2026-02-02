@@ -11,7 +11,7 @@ using PracticeBuddy.Components.Account.Pages;
 using PracticeBuddy.Components.Account.Pages.Manage;
 using PracticeBuddy.Data;
 
-namespace Microsoft.AspNetCore.Routing
+namespace PracticeBuddy.Components.Account
 {
     internal static class IdentityComponentsEndpointRouteBuilderExtensions
     {
