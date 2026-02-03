@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 
-namespace PracticeBuddy.Data
+namespace PracticeBuddy.Models
 {
     /// <summary>
     /// Provides an application user class that extends the IdentityUser class.

@@ -5,6 +5,7 @@ using MudBlazor.Services;
 using PracticeBuddy.Components;
 using PracticeBuddy.Components.Account;
 using PracticeBuddy.Data;
+using PracticeBuddy.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

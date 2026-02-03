@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Primitives;
 using PracticeBuddy.Components.Account.Pages;
 using PracticeBuddy.Components.Account.Pages.Manage;
-using PracticeBuddy.Data;
+using PracticeBuddy.Models;
 
 namespace PracticeBuddy.Components.Account
 {

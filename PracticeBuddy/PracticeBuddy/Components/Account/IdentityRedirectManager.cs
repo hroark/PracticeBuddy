@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Identity;
-using PracticeBuddy.Data;
+using PracticeBuddy.Models;
 
 namespace PracticeBuddy.Components.Account
 {

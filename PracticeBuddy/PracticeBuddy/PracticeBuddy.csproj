@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\app.css" />
+    <Content Remove="wwwroot\images\Logo3.png" />
   </ItemGroup>
 
   <ItemGroup>
