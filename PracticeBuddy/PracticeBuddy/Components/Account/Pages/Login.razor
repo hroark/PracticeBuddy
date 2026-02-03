@@ -3,35 +3,39 @@
 @using System.ComponentModel.DataAnnotations
 @using Variant = MudBlazor.Variant
 
-
-<label style="display: block; text-align: center; font-size: x-large; font:bold">Please Log In</label>
-<img src="/images/Treble dude.png" style="height: 200px" />
 <EditForm Model="@_user" OnValidSubmit="OnValidSubmit">
     <DataAnnotationsValidator />
-
     <MudGrid>
-        <MudItem xs="4" sm="4">
+        <MudItem xs="12" sm="7">
             <MudCard>
                 <MudCardContent>
-                    <MudTextField Label="Username" Variant="Variant.Outlined" Margin="Margin.Dense"
-                                  @bind-Value="_user.Username" For="@(() => _user.Username)"/>
-                    <MudTextField Label="Password" Variant="Variant.Outlined" Margin="Margin.Dense"
-                                  @bind-Value="_user.Password" For="@(() => _user.Password)" InputType="InputType.Password"/>
+                    <MudTextField Label="Username" Variant="Variant.Outlined" HelperText="Max. 8 characters"
+                                  @bind-Value="_user.Username" For="@(() => _user.Username)" />
+                    <MudTextField Label="Password" HelperText="Choose a strong password" Class="mt-3"
+                                  @bind-Value="_user.Password" For="@(() => _user.Password)" InputType="InputType.Password" />
+                    <MudTextField Label="Confirm Password" HelperText="Please verify your password" Class="mt-3"
+                                  @bind-Value="_user.PasswordVerification" For="@(() => _user.PasswordVerification)" InputType="InputType.Password" />
                 </MudCardContent>
-                @* <input type="submit" class="btn btn-primary" value="Save" /> *@
-                <MudButton href="/Account/Manage" Variant="Variant.Filled">Profile Management</MudButton>
+                <MudCardActions>
+                    <MudButton ButtonType="MudBlazor.ButtonType.Submit" Variant="Variant.Outlined" Color="Color.Primary"
+                               Class="ml-auto">Log In</MudButton>
+                </MudCardActions>
             </MudCard>
+        </MudItem>
+        <MudItem xs="12" sm="5">
+            <MudPaper Class="pa-4 mud-height-full">
+                <MudText Typo="Typo.subtitle2">Validation Summary</MudText>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12">
+            <MudText Typo="Typo.body2" Align="Align.Center">
+                Fill out the form correctly to see the success message.
+            </MudText>
         </MudItem>
     </MudGrid>
 </EditForm>
-
-@code {private readonly LoginFormModel _user = new();
-
-    private IEnumerable<string> MaxCharacters(string characters, int length)
-    {
-        if (!string.IsNullOrEmpty(characters) && length < characters?.Length)
-            yield return "Max" + length + " characters";
-    }
+@code {
+    private readonly LoginFormModel _user = new LoginFormModel();
 
     private void OnValidSubmit(EditContext context)
     {
@@ -50,5 +54,11 @@
         [Required]
         [MinLength(6), MaxLength(15)]
         public string Password { get; set; } = string.Empty;
+
+        [Required]
+        [MinLength(6), MaxLength(15)]
+        [Compare(nameof(Password))]
+        [StringLength(15, ErrorMessage = "The entered passwords do not match", MinimumLength = 6)]
+        public string PasswordVerification { get; set; } = string.Empty;
     }
 }

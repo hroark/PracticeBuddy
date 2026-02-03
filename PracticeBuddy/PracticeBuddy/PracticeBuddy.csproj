@@ -15,8 +15,6 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\app.css" />
-    <Content Remove="wwwroot\images\folder.jpg" />
-    <Content Remove="wwwroot\images\Side Guitar.png" />
   </ItemGroup>
 
   <ItemGroup>
