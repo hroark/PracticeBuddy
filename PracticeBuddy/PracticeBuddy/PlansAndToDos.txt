@@ -3,4 +3,6 @@
 #Add email verification
 #Implement user profile page
 #Add password recovery feature
-
+#Implement user profile page
+#Add password recovery feature
+#Implement external login functionality	
