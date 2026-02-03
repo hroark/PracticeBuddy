@@ -1,6 +1,0 @@
-﻿#Fix login Form
-#fix registration form
-#Add email verification
-#Implement user profile page
-#Add password recovery feature
-

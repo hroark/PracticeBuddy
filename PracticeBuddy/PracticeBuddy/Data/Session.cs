@@ -1,6 +1,4 @@
-using PracticeBuddy.Data;
-
-namespace Practice_Buddy.Data
+namespace PracticeBuddy.Data
 {
     public class Session
     {
