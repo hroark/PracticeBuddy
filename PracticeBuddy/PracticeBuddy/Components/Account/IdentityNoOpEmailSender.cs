@@ -10,7 +10,7 @@ namespace PracticeBuddy.Components.Account
     /// <seealso cref="Microsoft.AspNetCore.Identity.IEmailSender&lt;PracticeBuddy.Data.ApplicationUser&gt;" />
     internal sealed class IdentityNoOpEmailSender : IEmailSender<ApplicationUser>
     {
-        private readonly IEmailSender _emailSender = new NoOpEmailSender();
+        private readonly NoOpEmailSender _emailSender = new NoOpEmailSender();
 
         public Task SendConfirmationLinkAsync(ApplicationUser user, string email, string confirmationLink) =>
             _emailSender.SendEmailAsync(email, "Confirm your email", $"Please confirm your account by <a href='{confirmationLink}'>clicking here</a>.");
