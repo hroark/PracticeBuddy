@@ -8,10 +8,10 @@
 @using PracticeBuddy.Data
 @using PracticeBuddy.Models
 
-@inject UserManager<ApplicationUser> UserManager
-@inject IUserStore<ApplicationUser> UserStore
-@inject SignInManager<ApplicationUser> SignInManager
-@inject IEmailSender<ApplicationUser> EmailSender
+@inject UserManager<UserLogin> UserManager
+@inject IUserStore<UserLogin> UserStore
+@inject SignInManager<UserLogin> SignInManager
+@inject IEmailSender<UserLogin> EmailSender
 @inject ILogger<Register> Logger
 @inject NavigationManager NavigationManager
 @inject IdentityRedirectManager RedirectManager
@@ -110,26 +110,26 @@
         }
     }
 
-    private ApplicationUser CreateUser()
+    private UserLogin CreateUser()
     {
         try
         {
-            return Activator.CreateInstance<ApplicationUser>();
+            return Activator.CreateInstance<UserLogin>();
         }
         catch
         {
-            throw new InvalidOperationException($"Can't create an instance of '{nameof(ApplicationUser)}'. " +
-                $"Ensure that '{nameof(ApplicationUser)}' is not an abstract class and has a parameterless constructor.");
+            throw new InvalidOperationException($"Can't create an instance of '{nameof(UserLogin)}'. " +
+                $"Ensure that '{nameof(UserLogin)}' is not an abstract class and has a parameterless constructor.");
         }
     }
 
-    private IUserEmailStore<ApplicationUser> GetEmailStore()
+    private IUserEmailStore<UserLogin> GetEmailStore()
     {
         if (!UserManager.SupportsUserEmail)
         {
             throw new NotSupportedException("The default UI requires a user store with email support.");
         }
-        return (IUserEmailStore<ApplicationUser>)UserStore;
+        return (IUserEmailStore<UserLogin>)UserStore;
     }
 
     private sealed class InputModel

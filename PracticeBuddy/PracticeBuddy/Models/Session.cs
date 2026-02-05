@@ -1,3 +1,5 @@
+using PracticeBuddy.Models;
+
 namespace Practice_Buddy.Data
 {
     public class Session
@@ -16,9 +18,9 @@ namespace Practice_Buddy.Data
 
         public SessionStatus Status { get; set; }
 
-        public List<string> Tags { get; set; } = new List<string>();
+        public List<string> Tags { get; set; } = new();
 
-        public List<SessionSteps> Tasks { get; set; } = new List<SessionSteps>();
+        public List<SessionSteps> Tasks { get; set; } = new();
 
         public double TotalTimesPlayed { get; set; }
 

@@ -49,7 +49,10 @@ namespace PracticeBuddy.Components.Account
         public void RedirectToCurrentPageWithStatus(string message, HttpContext context)
             => RedirectToWithStatus(CurrentPath, message, context);
 
-        public void RedirectToInvalidUser(UserManager<ApplicationUser> userManager, HttpContext context)
-            => RedirectToWithStatus("Account/InvalidUser", $"Error: Unable to load user with ID '{userManager.GetUserId(context.User)}'.", context);
+        public void RedirectToInvalidUser(UserManager<UserLogin> userManager, HttpContext context)
+        {
+            RedirectToWithStatus("Account/InvalidUser",
+                $"Error: Unable to load user with ID '{userManager.GetUserId(context.User)}'.", context);
+        }
     }
 }

@@ -3,7 +3,7 @@
 @using PracticeBuddy.Data
 @using PracticeBuddy.Models
 
-@inject SignInManager<ApplicationUser> SignInManager
+@inject SignInManager<UserLogin> SignInManager
 @inject IdentityRedirectManager RedirectManager
 
 @if (externalLogins.Length == 0)
