@@ -41,7 +41,7 @@ builder.Services.AddIdentityCore<UserLogin>(options =>
     .AddSignInManager()
     .AddDefaultTokenProviders();
 
-//ToDo: Implement Email Sender
+//ToDoToDo: Implement Email Sender
 
 WebApplication app = builder.Build();
 
