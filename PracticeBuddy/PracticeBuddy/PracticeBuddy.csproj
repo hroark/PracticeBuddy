@@ -16,8 +16,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="Components\Account\Shared\ReconnectModal.razor" />
     <Content Remove="wwwroot\app.css" />
     <Content Remove="wwwroot\images\Logo3.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Components\Account\Shared\ReconnectModal.razor.css" />
+    <None Remove="Components\Account\Shared\ReconnectModal.razor.js" />
   </ItemGroup>
 
   <ItemGroup>

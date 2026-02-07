@@ -80,13 +80,13 @@
 
 	protected override async Task OnInitializedAsync()
 	{
-			Input = new PracticeBuddy.Models.UserLogin(Input.Email, Input.Password = string.Empty)
-			{
-				Email = null,	
-				Password = null
-			};
+        Input ??= new PracticeBuddy.Models.UserLogin("", "")
+        {
+            Email = string.Empty,
+            Password = string.Empty
+        };
 
-		editContext = new EditContext(Input);
+        editContext = new EditContext(Input);
 
 		if (HttpMethods.IsGet(HttpContext.Request.Method))
 		{
@@ -114,7 +114,7 @@
 			RedirectManager.RedirectTo(ReturnUrl);
 		}
 		else if (result.IsLockedOut)
-		{mm
+		{
 			Logger.LogWarning("User account locked out.");
 			RedirectManager.RedirectTo("Account/Lockout");
 		}
