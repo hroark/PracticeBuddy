@@ -3,21 +3,20 @@
 @inherits LayoutComponentBase
 @layout LandingLayout
 @rendermode InteractiveAuto
-<MudThemeProvider />
-<MudPopoverProvider />
-<MudSnackbarProvider />
+<MudThemeProvider/>
+<MudPopoverProvider/>
+<MudSnackbarProvider/>
 
-<div style="text-align: center">
-    <div style="background:lightskyblue;">
-        <br />
-        <img src="/images/Logo3.png" style="height: 600px" alt="Guitar Logo"/>
-        <div>
-            <MudButton href="/Account/Login" Variant="MudBlazor.Variant.Filled" Style="background-color: yellowgreen; color: white; width: 100px; height: 60px;">Log In</MudButton>
-            <MudButton href="/Account/Register" Variant="MudBlazor.Variant.Filled" Color="Color.Secondary">Register</MudButton>
-        </div>
+<div style="text-align: center; background: lightskyblue;">
+    <br/>
+    <img src="/images/Logo3.png" style="height: 600px" alt="Guitar Logo"/>
+    <div>
+        <MudButton href="/Account/Login" Variant="MudBlazor.Variant.Filled" Color="Color.Primary">Log In</MudButton>
+        <MudButton href="/Account/Register" Variant="MudBlazor.Variant.Filled" Color="Color.Secondary">Register</MudButton>
     </div>
-</div>
 
+    <img src="/images/NotesHR.png" style="height: 400px" alt="Notes strip"/>
+</div>
 @code
 {
 
