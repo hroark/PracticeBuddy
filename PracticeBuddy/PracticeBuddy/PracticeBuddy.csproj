@@ -9,33 +9,33 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Data\IdentityNoOpEmailSender.cs" />
-    <Compile Remove="Data\Migrations\00000000000000_CreateIdentitySchema.cs" />
-    <Compile Remove="Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs" />
-    <Compile Remove="Data\Migrations\ApplicationDbContextModelSnapshot.cs" />
+    <Compile Remove="Data\**" />
+    <Content Remove="Data\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <None Remove="Data\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="Components\Account\Shared\ReconnectModal.razor" />
     <Content Remove="wwwroot\app.css" />
     <Content Remove="wwwroot\images\Logo3.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PracticeBuddy.Client\PracticeBuddy.Client.csproj" />
-    <PackageReference Include="Dapper" Version="2.1.66" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="10.0.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.2" />
-    <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.13.2" />
-    <PackageReference Include="MudBlazor" Version="8.15.0" />
-    <PackageReference Include="MudBlazor.Extensions" Version="8.15.1" />
-    <PackageReference Include="Radzen.Blazor" Version="8.6.5" />
+    <None Remove="Components\Account\Shared\ReconnectModal.razor.css" />
+    <None Remove="Components\Account\Shared\ReconnectModal.razor.js" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Migrations\" />
+    <ProjectReference Include="..\PracticeBuddy.Client\PracticeBuddy.Client.csproj" />
+    <PackageReference Include="Azure.Identity" Version="1.17.1" />
+    <PackageReference Include="Dapper" Version="2.1.66" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.3" />
+    <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.14.0" />
+    <PackageReference Include="MudBlazor" Version="8.15.0" />
+    <PackageReference Include="MudBlazor.Extensions" Version="8.15.1" />
+    <PackageReference Include="Radzen.Blazor" Version="9.0.4" />
   </ItemGroup>
 
 </Project>

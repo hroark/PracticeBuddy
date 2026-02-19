@@ -21,7 +21,7 @@ public class SessionSteps
 {
     public int Id { get; set; }
     public Progress Progress { get; set; } = 0;
-    public int RoutineId { get; set; }
+    public int SesionId { get; set; }
     public TaskStatus Status { get; set; } = 0;
     public int SwapMeetCount { get; set; } = 0;
     public decimal TargetDurationMinutes { get; set; } = 0;
