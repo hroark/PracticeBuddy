@@ -1,6 +1,8 @@
 ## Practice Buddy [![.NET](https://github.com/hroark/PracticeBuddy/actions/workflows/dotnet.yml/badge.svg)](https://github.com/hroark/PracticeBuddy/actions/workflows/dotnet.yml)
 This is a tool to help guitar (and other instrument) players create and organize their practice routines.
 
+For components I am using the free "Mud Blazor" as well as free ones from Radzen.
+
 **Planned features:**
 
  - Set routine timers
