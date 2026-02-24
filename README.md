@@ -1,7 +1,10 @@
 ## Practice Buddy [![.NET](https://github.com/hroark/PracticeBuddy/actions/workflows/dotnet.yml/badge.svg)](https://github.com/hroark/PracticeBuddy/actions/workflows/dotnet.yml)
 This is a tool to help guitar (and other instrument) players create and organize their practice routines.
+I have switched from Blazor/EF Core to regular CRUD because I would like to learn more about Dapper.
 
-For components I am using the free "MudBlazor" as well as free ones from Radzen.
+----------------------------------------------------------------------------------------------------
+
+For components I am using the free "MudBlazor" as well as free ones from Radzen, as well as the "stock" components.
 
 **Planned features:**
 
