@@ -1,4 +1,7 @@
 <Solution>
+  <Project Path="PracticeBuddy.AppHost/PracticeBuddy.AppHost.csproj" Id="1acdd74b-7a59-420a-93b8-63e369faec71" />
+  <Project Path="PracticeBuddy.ServiceDefaults/PracticeBuddy.ServiceDefaults.csproj" />
   <Project Path="PracticeBuddy/PracticeBuddy.Client/PracticeBuddy.Client.csproj" />
   <Project Path="PracticeBuddy/PracticeBuddy/PracticeBuddy.csproj" />
+  <Project Path="PracticeBuddyAPI/PracticeBuddyAPI.csproj" />
 </Solution>
