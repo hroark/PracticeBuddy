@@ -1,18 +1,5 @@
 ﻿namespace PracticeBuddy.Models;
 
-public enum Progress
-{
-    NotStarted,
-    InProgress,
-    Completed
-}
-
-public enum TaskStatus
-{
-    Active,
-    Stashed,
-    Deleted
-}
 
 /// <summary>
 /// A session Step is a single task within a practice routine.
@@ -21,7 +8,7 @@ public class SessionSteps
 {
     public int Id { get; set; }
     public Progress Progress { get; set; } = 0;
-    public int SesionId { get; set; }
+    public int SessionId { get; set; }
     public TaskStatus Status { get; set; } = 0;
     public int SwapMeetCount { get; set; } = 0;
     public decimal TargetDurationMinutes { get; set; } = 0;
