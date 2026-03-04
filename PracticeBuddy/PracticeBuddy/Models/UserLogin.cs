@@ -7,8 +7,10 @@ namespace PracticeBuddy.Models;
 /// </summary>
 public class UserLogin
 {
-    public UserLogin()
+    public UserLogin(string email, string password)
     {
+        Email = email;
+        Password = password;
     }
 
     [Required] [EmailAddress] public string? Email { get; set; }
