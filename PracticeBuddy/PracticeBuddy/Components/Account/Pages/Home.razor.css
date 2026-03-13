@@ -1,0 +1,198 @@
+/* Main page wrapper - Full viewport height with perfect centering */
+.home-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+/* Container styles - Centered content */
+.home-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Hero section - Perfectly centered card */
+.hero-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo container - Centered logo */
+.logo-container {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-image {
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+}
+
+/* Hero content - Centered text content */
+.hero-content {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-title {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.hero-subtitle {
+    color: #7f8c8d;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 500px;
+}
+
+/* Action buttons - Centered horizontally */
+.action-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.action-btn {
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    text-transform: none;
+    min-width: 160px;
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
+
+.secondary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.2);
+}
+
+/* Notes decoration - Centered */
+.notes-decoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    opacity: 0.7;
+}
+
+.notes-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive design - Maintain centering on all screen sizes */
+@media (max-width: 768px) {
+    .home-page {
+        padding: 1rem 0.5rem;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-container {
+        max-width: 100%;
+        gap: 1.5rem;
+    }
+
+    .hero-section {
+        padding: 2rem 1rem;
+        border-radius: 15px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .action-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .logo-image {
+        height: 200px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-page {
+        padding: 0.5rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .hero-content {
+        padding: 0;
+    }
+}
+
+/* Ensure perfect vertical centering on very tall screens */
+@media (min-height: 900px) {
+    .home-page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Smooth animations */
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        transition: all 0.3s ease;
+    }
+}
