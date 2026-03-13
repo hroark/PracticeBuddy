@@ -7,18 +7,61 @@
 <MudPopoverProvider/>
 <MudSnackbarProvider/>
 
-<div style="text-align: center; background: lightskyblue;">
-    <br/>
-    <img src="/images/Logo3.png" style="height: 600px" alt="Guitar Logo"/>
-    <div>
-        <MudButton href="/Account/Login" Variant="MudBlazor.Variant.Filled" Color="Color.Primary">Log In</MudButton>
-        <MudButton href="/Account/Register" Variant="MudBlazor.Variant.Filled" Color="Color.Secondary">Register</MudButton>
-    </div>
-
-    <img src="/images/NotesHR.png" style="height: 400px" alt="Notes strip"/>
+<div class="home-page">
+    <MudContainer MaxWidth="MaxWidth.Large" Class="home-container">
+        
+        <!-- Header Section -->
+        <div class="hero-section">
+            <div class="logo-container">
+                <MudImage Src="/images/Logo3.png" 
+                         Alt="Practice Buddy Logo" 
+                         Height="300" 
+                         Class="logo-image" />
+            </div>
+            
+            <div class="hero-content">
+                <MudText Typo="Typo.h2" Class="hero-title">
+                    Practice Buddy
+                </MudText>
+                
+                <MudText Typo="Typo.h6" Class="hero-subtitle">
+                    A different approach to enhance your practice routine.
+                </MudText>
+                
+                <div class="action-buttons">
+                    <MudButton href="/Account/Register" 
+                               Variant="MudBlazor.Variant.Filled"
+                              Color="Color.Primary" 
+                              Size="Size.Large"
+                              Class="action-btn primary-btn">
+                        <MudIcon Icon="@Icons.Material.Filled.PersonAdd" Class="me-2" />
+                        Get Started
+                    </MudButton>
+                    
+                    <MudButton href="/Account/Login" 
+                               Variant="MudBlazor.Variant.Outlined"
+                              Color="Color.Primary" 
+                              Size="Size.Large"
+                              Class="action-btn secondary-btn">
+                        <MudIcon Icon="@Icons.Material.Filled.Login" Class="me-2" />
+                        Sign In
+                    </MudButton>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Musical Notes Decoration -->
+        <div class="notes-decoration">
+            <MudImage Src="/images/NotesHR.png" 
+                     Alt="Musical Notes" 
+                     Height="150" 
+                     Class="notes-image" />
+        </div>
+        
+    </MudContainer>
 </div>
+
 @code
 {
-
 
 }
