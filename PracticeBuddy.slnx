@@ -1,4 +1,3 @@
 <Solution>
-  <Project Path="PracticeBuddy/PracticeBuddy.Client/PracticeBuddy.Client.csproj" />
   <Project Path="PracticeBuddy/PracticeBuddy/PracticeBuddy.csproj" />
 </Solution>
